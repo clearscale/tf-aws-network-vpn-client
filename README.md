@@ -162,7 +162,7 @@ Source this module using the following Terraform example:
 
 ```
 module "vpn" {
-  source = "../../../../mod/service/tf-aws-vpn-client"
+  source = "github.com/clearscale/tf-aws-vpn-client.git?ref=v1.0.0"
 
   # Customize for each account/region/VPC
   description                    = "my-client-vpn"
