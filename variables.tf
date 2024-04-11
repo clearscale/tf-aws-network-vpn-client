@@ -69,6 +69,7 @@ variable "name" {
 }
 
 variable "description" {
+  type        = string
   description = "The description of the Client VPN."
   default     = "Client VPN"
 }
@@ -81,12 +82,6 @@ variable "client_cidr" {
 variable "server_certificate_arn" {
   description = "The ARN of the server certificate."
   type        = string
-}
-
-variable "client_certificate_arn" {
-  description = "The ARN of the client certificate."
-  type        = string
-  default     = null
 }
 
 variable "saml_provider_arn" {
@@ -103,12 +98,6 @@ variable "dns_servers" {
   description = "VPC CIDR (var.vpc_cidr) block .2 address. Example: VPC is 10.51.0.0/19, DNS is 10.51.0.2."
   type        = list(string)
   default     = []
-}
-
-variable "vpn_port" {
-  description = "The port to use for the Client VPN."
-  type        = number
-  default     = 443
 }
 
 variable "vpc_id" {
